@@ -1,0 +1,46 @@
+/*
+  Theme Name: My Church Website
+  Description: Custom CSS styles for the church website.
+  Author: Your Name
+  Version: 1.0
+  License: [Insert license details]
+*/
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Other CSS rules */
+/* ... */
+body {
+  background-color: aqua;
+}
+
+.Option-menu {
+  background-color: black;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Option-menu ul {
+  background-color: red;
+  height: 70px;
+  display: flex;
+  list-style: none;
+}
+
+.Option-menu ul li {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+#logo img {
+  margin-top: 5px;
+  width: 50px;
+  height: 50px;
+}
