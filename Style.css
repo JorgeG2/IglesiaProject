@@ -78,16 +78,30 @@
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
 #left-side {
-  width: 60vh;
-  height: 1100px;
+  width: 70vh;
+  height: 800px;
   background-color: beige;
   border: 0px;
+  display: flex;
+}
+
+#left-side ul{
+  display: flex;
+}
+
+#left-side ul li{
+  height: 50px;
+  width: 50px;
+  list-style: none;
+  margin-right: 15px;
+  background-color: aqua;
 }
 
 #right-side {
-  width: 60vh;
-  height: 1100px;
+  width: 70vh;
+  height: 800px;
   background-color: beige;
   border: 0px;
 }
