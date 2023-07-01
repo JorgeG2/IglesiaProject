@@ -85,18 +85,17 @@
   background-color: beige;
   border: 0px;
   display: flex;
+  flex-direction: column;
 }
 
-#left-side ul{
-  display: flex;
+#left-side img {
+  width: 200px;
+  length: 100px;
+  aspect-ratio: 3/4.5;
 }
 
-#left-side ul li{
-  height: 50px;
-  width: 50px;
-  list-style: none;
-  margin-right: 15px;
-  background-color: aqua;
+#Photo1 {
+  filter: blur(5px);
 }
 
 #right-side {
