@@ -88,16 +88,12 @@
 }
 
 #left-side {
-  width: 70vh;
+  width: 500px;
   height: auto;
   /* background-color: beige; */
   border: 0px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* Three columns with equal width */
-  grid-template-rows: 1fr 1fr 1fr; /* Three rows with equal height */
-  grid-gap: 10px; /* Gap between grid cells */
-  height: 400px; /* Adjust the height to fit your layout */
-
+  display: flex;
+  flex-direction: column;
 }
 
 #left-side img {
@@ -107,21 +103,20 @@
   border-radius: 27px;
 }
 
-#photo1 {
-  grid-row: 1 / 3; /* Span two rows */
-  grid-column: 1 / 3; /* Span two columns */
+#photo1,
+#photo2,
+#photo3 {
+  display: flex;
 }
 
-#photo2{
-  grid-row: 2 / 4; /* Span two rows */
-  grid-column: 2 / 4; /* Span two columns */
+#photo2 {
+  justify-content: center;
+  transform: scale(1.2);
 }
 
-#photo3{
-  grid-row: 1 / 2; /* Span one row */
-  grid-column: 3 / 4; /* Span one column */
+#photo3 {
+  justify-content: end;
 }
-
 
 #right-side {
   width: 70vh;
