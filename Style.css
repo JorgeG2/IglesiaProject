@@ -98,7 +98,7 @@
 
 #left-side img {
   width: 200px;
-  length: 100px;
+  /* length: 100px; */
   aspect-ratio: 1/1;
   border-radius: 27px;
 }
@@ -135,4 +135,109 @@
   display: flex;
   justify-content: center;
   font-size: 34px;
+}
+
+/* This part is for page 4 */
+.Fourth-Page{
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  margin-bottom:25px ;
+}
+/* Here we are working on the left box */
+#side-left{
+  width: 650px;
+  height: 500px;
+  border: 5px solid black;
+  background-color:#5F9EA0 ;
+
+}
+
+#txt{
+  display: flex;
+  justify-content: center;
+
+}
+#container{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 40px;
+  /* border: 1px solid red; */
+
+}
+
+#email{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  height: 40px;
+  border: 1px solid purple;
+
+}
+
+#container2{
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 300px;
+  /* border: 1px solid red; */
+}
+
+#message{
+  /* margin-top: 35px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  height: 300px;
+  border: 1px solid purple;
+  
+}
+
+/* Here we are working on the right box */
+
+#right-side2{
+  width: 650px;
+  height: 500px;
+  border: 5px solid black;
+}
+#txt2{
+  display: flex;
+  justify-content: center;
+}
+
+#container-r{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 40px;
+  border: 1px solid red;
+}
+
+#container-r2{
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 300px;
+  /* border: 1px solid red; */
+
+}
+
+#prayer-request{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  height: 300px;
+  border: 1px solid purple;
 }
