@@ -83,7 +83,7 @@
   justify-content: center;
   justify-content: space-evenly;
   /* margin-top: 15px; */
-  margin-bottom: 15px;
+  padding-bottom: 15px;
   height: 70vh;
   background-color: #142127;
 }
@@ -143,12 +143,12 @@
 
 /* This part is for page 4 */
 .Fourth-Page{
-  margin-top:50px;
+  background-color: beige;
+  padding-top:50px;
   display: flex;
   justify-content: center;
   justify-content: space-around;
   margin-bottom:25px ;
-  background-color: beige;
 }
 /* Here we are working on the left box */
 #side-left{
@@ -253,3 +253,4 @@
   border: 1px solid purple;
 }
 
+/* Last part of the webpage */
