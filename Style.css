@@ -145,10 +145,12 @@
 .Fourth-Page{
   background-color: beige;
   padding-top:50px;
+  padding-bottom:50px;
+
   display: flex;
   justify-content: center;
   justify-content: space-around;
-  margin-bottom:25px ;
+  /* margin-bottom:25px ; */
 }
 /* Here we are working on the left box */
 #side-left{
@@ -254,3 +256,50 @@
 }
 
 /* Last part of the webpage */
+
+#bottom-part{
+  width: auto;
+  height: 200px;
+  background-color: darkcyan;
+  display:flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+
+}
+
+#container3l{
+  width: 40%;
+  height: 150px;
+  /* background-color: bisque; */
+  /* background-color: bisque; */
+
+}
+
+#rsc{
+  margin-bottom: 10px;
+}
+
+#container3r{
+  width: 40%;
+  height: 150px;
+  /* background-color: bisque; */
+
+}
+
+#rscList{
+  list-style: none;
+}
+#rscList, a{
+  text-decoration: none;
+
+}
+
+#rsc li {
+  margin-bottom: 100px;
+}
+
+#rsc li:last-child {
+  margin-bottom: 0;
+}
+
