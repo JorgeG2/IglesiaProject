@@ -292,11 +292,18 @@
 }
 #rscList, a{
   text-decoration: none;
+  color: black;
+  transition: text-decoration 0.2s;
+}
+
+#rscList li a:hover{
+  text-decoration: underline
+  
 
 }
 
-#rsc li {
-  margin-bottom: 100px;
+#rscList li {
+  margin-bottom: 2px;
 }
 
 #rsc li:last-child {
