@@ -7,27 +7,36 @@
     <title>Iglesia Camino al Cielo</title>
 
     <!-- Font for the Intro -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans&display=swap" rel="stylesheet">
+    
     <!-------Second Font--------->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Capriola&family=DynaPuff:wght@500&family=Playfair+Display:wght@500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans&display=swap" rel="stylesheet">
 
+    <!-- font for nav bar -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Style.css" />
+
+    <!-- Add these lines to your HTML's head section THIS IS BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
   </head>
   <body>
     <div class="First-Page">
+
       <div class="Option-menu">
         <div id="logo">
-          <img src="logo.jpg" alt="chruch logo" />
+          <img src="logo.jpg" alt="chruch logo"/>
         </div>
         <div id="options">
           <ul>
@@ -40,24 +49,16 @@
       </div>
 
       <div id="Welcome">
-        <div class="top-line">somos iglesia</div>
-        <div class="bottom-line">camino al cielo</div>
+      
+        <div id="bone">
+            <img src="church.png" alt="hellosign"/>
+        </div>
       </div>
     </div>
 
     <div class="Second-Page">
       <div id="left-side">
-        <div id="photo1">
-          <img src="Dawn.jpg" alt="Man with bible" />
-        </div>
-
-        <div id="photo2">
-          <img src="Tree and River.jpg" alt="Jesus" />
-        </div>
-
-        <div id="photo3">
-          <img src="Tree at Night.jpg" alt="col" />
-        </div>
+       <img src="Colossians.png" alt="verse"/>
       </div>
       <div id="right-side">
         <div id="top">
@@ -65,47 +66,69 @@
         </div>
 
         <div id="bottom">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
 
         </div>
       </div>
     </div>
 
+    <div class="two-five">
+      <img id="jesus-img" src="Jesus.jpg" width="100%">
+
+    </div>
+
     <div class="Third-Page">
-    
+      <h1 id="Ministries">Nuestro Ministerios</h1>
+      <div id="box-container">
+       <div id="Mens">
+        <img src="mens.jpg" width="100%" height="100%">
+      </div>
+       <div id="Womens">
+        <img src="Womens.jpg" width="100%" height="100%">
+       </div>
+       <div id="Youth">
+        <img src="Kids.jpg" width="100%" height="100%"
+       </div>
+     </div>
     </div>
 
     <div class="Fourth-Page">
 
-      <div id="side-left">
+        <div id="side-left">
         <h2 id="txt">Tienes Preguntas?</h2>
         <div id = container>
-          <div id="email">
-          </div>
-        </div>
-        <div id="container2">
-          <div id="message">
-          </div>
-        </div>
-      </div>
-     <!-- the right side of the boxes -->
-      <div id="right-side2">
-        <h2 id="txt2">Necesitas Oracion?</h2>
-        <div id="container-r">
-          <div id="selection-bar">
-            <button type="button">Click Me!</button>
-          </div>
+          <!-- Change this and make it a form -->
+          <div id="top-left">
           
-        </div>
-        <div id="container-r2">
-          <div id="prayer-request">
+
+            <form>
+              <!-- <label for="email">Email:</label><br>
+              <input type="text" id="email" name="email address"><br>
+               -->
+               <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </form>
             
           </div>
-        </div>
-
-      </div>
-    </div>
+       
+     <!-- the right side of the boxes -->
+     
+    </div> 
     <!-- Bottom part of the webpage -->
     <div id="bottom-part">
       <div id="container3l">
