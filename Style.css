@@ -32,7 +32,6 @@
   width: 100%;
 }
 
-
 .Option-menu {
   height: 60px;
   display: flex;
@@ -40,7 +39,6 @@
   /* margin-top: 8px; */
   /* padding-bottom: 90px; */
 }
-
 
 .Option-menu ul {
   height: 70px;
@@ -56,10 +54,9 @@
 }
 .Option-menu ul li a {
   color: beige;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-size: 20px;
   font-weight: bold;
-  
 }
 
 #logo img {
@@ -69,29 +66,25 @@
   margin-left: 37px;
 }
 
-#Welcome  {
- width:auto;
- height:95%;
- /* background-color: aqua; */
- display:flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
-
-} 
-
-#Welcome #bone{
- height:auto;
- width: auto;
- /* border: 6px solid red; */
- margin-bottom: 150px;
- /* margin-right: 60px; */
- transform: scale(.4);
- text-shadow: 2px 2px 4px #000000;
-
-  
+#Welcome {
+  width: auto;
+  height: 95%;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+#Welcome #bone {
+  height: auto;
+  width: auto;
+  /* border: 6px solid red; */
+  margin-bottom: 150px;
+  /* margin-right: 60px; */
+  transform: scale(0.4);
+  text-shadow: 2px 2px 4px #000000;
+}
 
 /* Below is the second page of the project */
 
@@ -102,8 +95,8 @@
   /* margin-top: 15px; */
   /* padding-bottom: 25px; */
   padding-top: 60px;
-  height: 75vh;
-  background-color: #29434C;
+  height: 50vh;
+  background-color: #29434c;
 }
 
 #left-side {
@@ -121,7 +114,6 @@
   justify-content: center;
 }
 
-
 #right-side {
   width: 70vh;
   height: auto;
@@ -131,7 +123,7 @@
 
 #top {
   /* font-family: "DynaPuff", serif; */
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 25px;
   margin-bottom: 25px;
   color: white;
@@ -142,39 +134,36 @@
   justify-content: center;
   font-size: 28px;
   color: white;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 
-#jesus-img{
-  width: 100%; 
-  height: 50vh; 
+#jesus-img {
+  width: 100%;
+  height: 50vh;
   object-fit: cover;
   object-position: 50% 25%; /* 50% left, 0% top */
 }
 
 /* This is the third page */
-.Third-Page{
+.Third-Page {
   background-color: #d49c6b;
 }
-#box-container{
+#box-container {
   display: flex;
   justify-content: space-around;
   padding-bottom: 35px;
-
 }
 
-#Ministries{
-  font-family: 'Bebas Neue', sans-serif;
+#Ministries {
+  font-family: "Bebas Neue", sans-serif;
   font-size: 50px;
   padding-top: 25px;
   margin-bottom: 25px;
   color: white;
   margin-left: 30px;
-  
 }
 
-
-#Mens{
+#Mens {
   height: auto;
   width: 29%;
 
@@ -188,7 +177,7 @@
   background-repeat: no-repeat;
 }
 
-#Womens{
+#Womens {
   height: auto;
   width: 29%;
 
@@ -202,7 +191,7 @@
   background-repeat: no-repeat;
 }
 
-#Youth{
+#Youth {
   height: auto;
   width: 29%;
 
@@ -216,11 +205,9 @@
   background-repeat: no-repeat;
 }
 
-
-
 /* This part is for page 4 which is prayer request and questions*/
-.Fourth-Page{
-  background-color: #F1EBE5;
+.Fourth-Page {
+  background-color: #f1ebe5;
   /* padding-top:50px;
   padding-bottom:50px; */
 
@@ -231,94 +218,45 @@
   justify-content: center;
   justify-content: space-around;
 
-  
-
   /* margin-bottom:25px ; */
 }
 /* Here we are working on the left box */
- #side-left{
-  /* width: 40rem;
-  height: 500px;
-  border: 5px solid black; 
-  background-color:#3791eb ;
+#side-left {
+  /* width: 45%;  
+   max-width: 40rem; 
+   height: 600px;  */
 
-  border-radius: 70px; */
-
-  width: 45%; /* Responsive width using percentage */
-  max-width: 40rem; /* Limit maximum width */
-  height: auto; /* Let the height adjust based on content */
-  border: 5px solid black;
+  /* border: 5px solid black;
   background-color: #3791eb;
-  border-radius: 5%; /* Adjusted border radius for responsiveness */
-  margin: 1rem 0; /* Responsive margin using rem units */
-
-} 
-
-
-#txt{
+  border-radius: 5%; 
+  margin: 1rem 0;  */
+  width: 300px;
+}
+#txt {
   margin-top: 30px;
   display: flex;
   justify-content: center;
-
-}
-#container{
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: 40px;
-  /* border: 1px solid red; */
-
-}
-
-/* CHANGE THIS PART OF THE PROJECT */
-#bothN{
-  display: flex;
-  justify-content: space-around;
-}
-
-#container2{
-  margin-top: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: 300px;
-  /* border: 1px solid red; */
-}
-
-
-/*CHANGE THIS PART OF THE PROJECT*/
-#message{
-  /* margin-top: 35px; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 75%;
-  height: 300px;
-  border: 1px solid purple;
-  
+  color: brown;
 }
 
 /* Here we are working on the right box */
 
-#right-side2{
+#right-side2 {
   width: 45%;
   max-width: 40rem; /* Limit maximum width */
   height: auto;
   /* border: 5px solid black; */
-  background-color:#a9ccf0 ;
+  background-color: #a9ccf0;
   border-radius: 70px;
 }
-#txt2{
+#txt2 {
   margin-top: 30px;
   display: flex;
   justify-content: center;
 }
 
 /* CHANGE THIS PART OF THE PROJECT */
-#container-r{
+#container-r {
   margin-top: 20px;
   display: flex;
   justify-content: center;
@@ -328,7 +266,7 @@
   /* border: 1px solid red; */
 }
 
-#container-r2{
+#container-r2 {
   margin-top: 35px;
   display: flex;
   justify-content: center;
@@ -336,11 +274,10 @@
   width: auto;
   height: 300px;
   /* border: 1px solid red; */
-
 }
 
 /* CHANGE THIS PART OF THE PROJECT */
-#prayer-request{
+#prayer-request {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -351,50 +288,45 @@
 
 /* Last part of the webpage */
 
-#bottom-part{
+#bottom-part {
   width: auto;
   height: auto;
   background-color: darkcyan;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: space-evenly;
   padding-bottom: 15px;
-
-
 }
 
-#container3l{
+#container3l {
   width: 40%;
   height: auto;
   /* background-color: bisque; */
   /* background-color: bisque; */
-
 }
 
-#rsc{
+#rsc {
   margin-bottom: 0px;
 }
 
-#container3r{
+#container3r {
   width: 40%;
   height: 150px;
   /* background-color: bisque; */
-
 }
 
-#rscList{
+#rscList {
   list-style: none;
 }
-#rscList, a{
+#rscList,
+a {
   text-decoration: none;
   color: black;
   transition: text-decoration 0.2s;
 }
 
-#rscList li a:hover{
-  text-decoration: underline
-  
-
+#rscList li a:hover {
+  text-decoration: underline;
 }
 
 #rscList li {
@@ -404,4 +336,3 @@
 #rsc li:last-child {
   margin-bottom: 0;
 }
-
