@@ -309,10 +309,10 @@
   /* margin-top: 15px; */
 }
 
-#bottom14 form{
+#bottom14 {
   display: flex;
   justify-content: space-around;
-  width: 85%; /* cant change width*/
+  width: 100%; /* cant change width*/
   /* background-color: purple; */
 }
 
