@@ -275,7 +275,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-
 }
 
 #bottom13 form {
@@ -293,15 +292,6 @@
   margin: 1rem 0;
 }
 
-#lasO{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  /* background-color: red; */
-  margin-top: 15px;
-  
-}
-
 #top14{
   display: flex;
   justify-content: center;
@@ -309,11 +299,34 @@
   /* margin-top: 15px; */
 }
 
+#prayerRequim{
+  font-size: 1.5rem;
+  margin-top: 15px; 
+  
+}
+
+
+
 #bottom14 {
   display: flex;
-  justify-content: space-around;
-  width: 100%; /* cant change width*/
-  /* background-color: purple; */
+  justify-content: center;
+  width: 100%; /* Make #bottom12 span the entire width of #side-left */
+  /* background-color: yellow; */
+  margin-top: 15px;
+  /* justify-content: space-between; */
+  /* background-color: red; */
+}
+
+#bottom15{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+#bottom15 form{
+  width: 80%; 
+  margin: 0 auto; 
 }
 
 
