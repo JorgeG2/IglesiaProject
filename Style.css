@@ -141,11 +141,18 @@
   
 }
 
+/* #two-five{
+  background-image: ;
+} */
+
 #jesus-img {
   width: 100%;
   height: 50vh;
   object-fit: cover;
   object-position: 50% 25%; /* 50% left, 0% top */
+
+
+  
 }
 
 /* This is the third page */
