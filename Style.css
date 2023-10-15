@@ -86,7 +86,7 @@
   text-shadow: 2px 2px 4px #000000;
 }
 
-/* Below is the second page of the project */
+/* Below is the second page of the project -------------------------------------------*/
 
 .Second-Page {
   display: flex;
@@ -95,12 +95,15 @@
   /* margin-top: 15px; */
   /* padding-bottom: 25px; */
   padding-top: 60px;
-  height: 80vh;
+  padding-bottom: 60px;
+  height: auto;
   background-color: #29434c;
 }
 
 #left-side {
-  width: 500px;
+  width: 40%;
+  max-width: 800px; /* Set a maximum width to control growth */
+
   height: auto;
   /* background-color: beige; */
   border: 0px;
@@ -108,17 +111,24 @@
   flex-direction: column;
 }
 
-#left-side img {
-  /* length: 100px; */
-  border-radius: 27px;
-  justify-content: center;
-}
-
 #right-side {
-  width: 70vh;
+  width: 40%;
+  /* max-width: 800px;  */
   height: auto;
+  max-height: 800px;
+  overflow: scroll;
+
   /* background-color: beige; */
   border: 0px;
+}
+
+#left-side img {
+  max-width: 100%;
+  height: auto;
+  width: 100%; /* Set the width to 100% to maintain the 1:1 aspect ratio */
+  max-height: 100%; /* Ensure the height doesn't exceed 100% of the container */
+  border-radius: 27px;
+  justify-content: center; /* This property is typically used with flex containers, not directly on images */
 }
 
 #top {
@@ -138,24 +148,38 @@
 
 #bottom p {
   font-size: 1.7vw;
-  
 }
+/* Working on Jesus background---------------------------------------------------------- */
 
-/* #two-five{
-  background-image: ;
-} */
-
-#jesus-img {
-  width: 100%;
+.two-five {
   height: 50vh;
-  object-fit: cover;
-  object-position: 50% 25%; /* 50% left, 0% top */
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
-
-  
+  /* The image portion of the style sheet */
+  background-image: url("Jesus.jpg"); /* Set the image as a background */
+  background-size: cover; /* Adjust how the background image is displayed */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Don't repeat the background image */
 }
 
-/* This is the third page */
+#Jesus-Verse {
+  width: 50%;
+  height: 50%;
+  margin-left: 5%;
+  /* background-color: aliceblue; */
+
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.1vw;
+}
+
+/* create media query to center jesus on Phones */
+
+/* In this part of the project we work on the Jesus image which will contain a verse */
+
+/* This is the third page -------------------------------------------------------------- */
 .Third-Page {
   background-color: #d49c6b;
 }
@@ -216,7 +240,7 @@
   background-repeat: no-repeat;
 }
 
-/* This part is for page 4 which is prayer request and questions*/
+/* This part is for page 4 which is prayer request and questions------------------------*/
 .Fourth-Page {
   background-color: #f1ebe5;
   /* padding-top:50px;
@@ -228,10 +252,9 @@
   display: flex;
   justify-content: center;
   justify-content: space-around;
-
 }
- /* Chat's version of code */
- #side-left {
+/* Chat's version of code */
+#side-left {
   width: 45%; /* Adjust the width as needed */
   height: auto;
   border: 2px solid black;
@@ -248,7 +271,7 @@
   margin-top: 15px;
 }
 
-#questionss{
+#questionss {
   font-size: 1.5rem;
 }
 
@@ -262,7 +285,7 @@
   /* background-color: red; */
 }
 
-#myForms{
+#myForms {
   display: flex;
   justify-content: space-around;
   width: 85%; /* cant change width*/
@@ -278,18 +301,18 @@
   }
 }
 
-#bottom13{
+#bottom13 {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
 #bottom13 form {
-  width: 80%; 
-  margin: 0 auto; 
+  width: 80%;
+  margin: 0 auto;
 }
 
-/* okat finally we get to the right side of the 4th page */
+/* okat finally we get to the right side of the 4th page*/
 #side-right {
   width: 45%; /* Adjust the width as needed */
   height: auto;
@@ -299,20 +322,17 @@
   margin: 1rem 0;
 }
 
-#top14{
+#top14 {
   display: flex;
   justify-content: center;
-  width: 100%
+  width: 100%;
   /* margin-top: 15px; */
 }
 
-#prayerRequim{
+#prayerRequim {
   font-size: 1.5rem;
-  margin-top: 15px; 
-  
+  margin-top: 15px;
 }
-
-
 
 #bottom14 {
   display: flex;
@@ -324,26 +344,16 @@
   /* background-color: red; */
 }
 
-#bottom15{
+#bottom15 {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-
-#bottom15 form{
-  width: 80%; 
-  margin: 0 auto; 
+#bottom15 form {
+  width: 80%;
+  margin: 0 auto;
 }
-
-
-
-
-
-
-
-
-
 
 /* Here we are working on the right box */
 
@@ -363,10 +373,7 @@
   justify-content: center;
 } */
 
-
-
-
-/* Last part of the webpage */
+/* Last part of the webpage -----------------------------------------------------------*/
 
 #bottom-part {
   width: auto;
