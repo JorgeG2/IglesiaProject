@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+.Body{
+    width: 100%;
+    height: auto;
+    display: flex;
+
+}
+
+
+#text{
+    height: auto;
+    width: 70%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
