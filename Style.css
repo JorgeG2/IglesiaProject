@@ -161,13 +161,16 @@
   background-color:chocolate;
 }
 
+#tv-box{
+  width: 40%;
+  height: 40%;
+  /* background-color: beige; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:black;
 
-
-
-
-
-
-
+}
 
 
 /* Working on Jesus background---------------------------------------------------------- */
