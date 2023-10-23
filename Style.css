@@ -149,6 +149,35 @@
 #bottom p {
   font-size: 1.7vw;
 }
+
+@media (max-width: 600px) {
+  .Second-Page {
+    flex-direction: column-reverse; /* Change to a vertical layout for smaller screens */
+    align-items: center; /* Center items vertically in the column layout */
+    padding-top: 30px;
+  }
+
+  #right-side {
+    width: 70%; /* Adjust the width as needed */
+    max-width: 100%; /* Adjust the max-width as needed */
+    /* margin-bottom: 30px; */
+  }
+
+  #top {
+    font-size: 8vw;
+  }
+
+  #bottom p {
+    font-size: 3vw;
+  }
+
+  #left-side {
+    width: 70%; /* Adjust the width as needed */
+    max-width: 100%; /* Adjust the max-width as needed */
+    margin-top: 20px;
+  }
+  
+}
 /* This is for the YouTube API -----------------------------------------*/
 
 .Youtube {
