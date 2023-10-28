@@ -90,15 +90,14 @@ img[src="church.png"][alt="hellosign"] {
   width: 100%;
   height: auto;
   /* border: 1px solid black;  */
- }
+}
 
- @media (max-width: 768px) {
+@media (max-width: 768px) {
   /* Media query for screens with a maximum width of 768px */
   img[src="church.png"][alt="hellosign"] {
     width: 80%; /* Adjust the width for smaller screens */
   }
 }
-
 
 /* Below is the second page of the project -------------------------------------------*/
 
@@ -190,7 +189,6 @@ img[src="church.png"][alt="hellosign"] {
     max-width: 100%; /* Adjust the max-width as needed */
     margin-top: 20px;
   }
-  
 }
 /* This is for the YouTube API -----------------------------------------*/
 
@@ -201,20 +199,18 @@ img[src="church.png"][alt="hellosign"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:chocolate;
+  background-color: chocolate;
 }
 
-#tv-box{
+#tv-box {
   width: 40%;
   height: 40%;
   /* background-color: beige; */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:black;
-
+  background-color: black;
 }
-
 
 /* Working on Jesus background---------------------------------------------------------- */
 
