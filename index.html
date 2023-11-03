@@ -56,11 +56,38 @@
         </div>
       </div>
 
-      <div id="Welcome">
+      <h1 class="hidden">
+        <div id="hamburger-icon">&#9776;</div>
+
+        <div id="hidden-menu">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">Ministries</a></li>
+            <li><a href="#">Prayers</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <script>
+        const menu = document.getElementById('menu');
+        const hamburgerIcon = document.querySelector('.hamburger-icon');
+        const currentRight = getComputedStyle(menu).getPropertyValue('right');
+  
+        if (currentRight === '0px') {
+          // Set your desired right position value
+          menu.style.right = '200px'; // Adjust this value to your desired position
+        } else {
+          // Set your desired right position value when closing
+           menu.style.right = '0px'; // Adjust this value to your desired closed position
+        }
+      </script>
+
+      <!-- <div id="Welcome">
         <div id="bone">
           <img src="church.png" alt="hellosign" />
         </div>
-      </div>
+      </div> -->
     </div>
 
     <!-- This is the Second page of the website -->
@@ -194,8 +221,7 @@
                 rows="4"
                 placeholder="Type your question here"
               >
-type</textarea
-              >
+              </textarea>
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>

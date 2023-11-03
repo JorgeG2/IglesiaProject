@@ -99,6 +99,24 @@ img[src="church.png"][alt="hellosign"] {
   }
 }
 
+/* working on the hamburger Menue*/
+@media (max-width: 1200px) {
+  .Option-menu {
+    display: none;
+  }
+}
+
+#hidden-menu {
+  display: none;
+}
+
+#hamburger-icon {
+  position: absolute;
+  cursor: pointer;
+  top: 30px;
+  right: 50px;
+}
+
 /* Below is the second page of the project -------------------------------------------*/
 
 .Second-Page {
