@@ -101,8 +101,15 @@ img[src="church.png"][alt="hellosign"] {
 
 /* working on the hamburger Menue --------------------------------------------*/
 
+/* this is for removing the top option menu after 1200px */
 @media (max-width: 1200px) {
   .Option-menu {
+    display: none;
+  }
+}
+/* this is for removing hidden-menu after greater than 1200px */
+@media (min-width: 1200px) {
+  #hidden {
     display: none;
   }
 }
@@ -122,10 +129,29 @@ img[src="church.png"][alt="hellosign"] {
 }
 
 #hidden-menu {
-  width: auto;
-  height: auto;
+  position: fixed;
+  width: 45%;
+  height: 100vh;
+  top: 0px;
+  right: 0px;
+  background-color: #d49c6b;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+}
+
+#hidden-menu ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+/* this is for removing hidden-menu after greater than 1200px */
+@media (min-width: 1200px) {
+  #hidden-menu {
+    display: none;
+  }
 }
 
 /* Below is the second page of the project -------------------------------------------*/
