@@ -108,17 +108,12 @@ img[src="church.png"][alt="hellosign"] {
   }
 }
 /* this is for removing hidden-menu after greater than 1200px */
-@media (min-width: 1200px) {
-  #hidden {
-    display: none;
-  }
-}
 
-/* @media (min-width: 1200px) {
+@media (min-width: 1200px) {
   #hamburger-icon {
     display: none;
   }
-} */
+}
 
 #hamburger-icon {
   position: fixed;
@@ -129,26 +124,41 @@ img[src="church.png"][alt="hellosign"] {
 }
 
 #hidden-menu {
+  /* display: none; */
   position: fixed;
   width: 45%;
   height: 100vh;
   top: 0px;
   right: 0px;
-  background-color: #d49c6b;
+  background-color: #6bd4c8;
   display: flex;
   justify-content: flex-start;
+  transform: translateX(100%); /* Add this line */
 }
 
 #hidden-menu ul {
+  display: flex;
+  flex-direction: column;
+  font-size: larger;
   list-style: none; /* Remove bullet points */
   padding: 0; /* Remove default padding */
   margin: 0; /* Remove default margin */
   margin-left: 20px;
-  margin-top: 40px;
+  margin-top: 90px;
+}
+
+#hidden-menu ul a {
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  color: inherit;
+  text-decoration: none;
+  font-family: "Noto Sans", sans-serif;
 }
 
 /* this is for removing hidden-menu after greater than 1200px */
-@media (min-width: 1200px) {
+@media (min-width: 800px) {
   #hidden-menu {
     display: none;
   }

@@ -63,9 +63,8 @@
       </div> -->
     </div>
 
-    <!-- This is the hamburger part its out of any containers in a fixed position -->
+    <!-- This is the hamburger part its out of any containers in a fixed position------------------ -->
 
-    <!-- <h1 class="hidden"> -->
     <div id="hidden-menu">
       <ul>
         <li><a href="#">About</a></li>
@@ -76,6 +75,25 @@
     </div>
     <!-- </h1> -->
     <div id="hamburger-icon">&#9776;</div>
+
+    <!-- your HTML code here -->
+
+    <script>
+      const hamburgerIcon = document.getElementById("hamburger-icon");
+      const hiddenMenu = document.getElementById("hidden-menu");
+
+      let isHidden = false;
+
+      hamburgerIcon.addEventListener("click", () => {
+        if (isHidden) {
+          hiddenMenu.style.transform = "translateX(0)";
+          isHidden = false;
+        } else {
+          hiddenMenu.style.transform = "translateX(100%)";
+          isHidden = true;
+        }
+      });
+    </script>
 
     <!-- This is the Second page of the website ---------------------------------- -->
 
