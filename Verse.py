@@ -1,6 +1,7 @@
 import requests
 import random
 
+
 # Define the API key and Bible ID
 API_KEY = '80507ab8dcb312bef4bcbdd4805808a1'
 BIBLE_ID = '592420522e16049f-01'
@@ -64,6 +65,11 @@ def get_random_verse():
 
 # Call the function to get a random verse
 get_random_verse()
+
+
+
+
+
 
 
 
