@@ -1,5 +1,6 @@
 import requests
 import random
+from flask import Flask, render_template
 
 
 # Define the API key and Bible ID
@@ -57,6 +58,7 @@ def get_random_verse():
         print("---------------------")
         print(data_response["data"]["passages"][0]["content"])
         html_passage = data_response["data"]["passages"][0]["content"]
+        return html_passage
 
 
     except requests.exceptions.RequestException as e:
@@ -66,7 +68,15 @@ def get_random_verse():
 # Call the function to get a random verse
 get_random_verse()
 
+app = Flask(__name__)
 
+@app.route('/')
+def home():
+    verse = get_random_verse()
+    return render_template('index.html', verse=verse)
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
 
 
