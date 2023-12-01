@@ -6,3 +6,5 @@ elif x == 10:
 else:
     print("C")
     dlngfreknjgklnwrlkgnf 
+
+    ejngngr
