@@ -70,10 +70,10 @@ get_random_verse()
 
 app = Flask(__name__)
 
-@app.route('/')
-def home():
-    verse = get_random_verse()
-    return render_template('index.html', verse=verse)
+# @app.route('/')
+# def home():
+#     verse = get_random_verse()
+#     return render_template('index.html', verse=verse)
 
 if __name__ == '__main__':
     app.run(debug=True)
