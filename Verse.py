@@ -1,7 +1,6 @@
 import requests
 import random
-from flask import Flask, render_template
-
+from bs4 import BeautifulSoup
 
 # Define the API key and Bible ID
 API_KEY = '80507ab8dcb312bef4bcbdd4805808a1'
@@ -51,15 +50,21 @@ def get_random_verse():
 
         # Parse the response data
         data_response = response.json()
-        # passage = data['main'][0] # Get the verse content and reference
 
         # Print the verse content and reference
-        # print(data_response)
-        print("---------------------")
-        print(data_response["data"]["passages"][0]["content"])
         html_passage = data_response["data"]["passages"][0]["content"]
-        return html_passage
 
+
+        # New code to parse HTML and extract text
+        soup = BeautifulSoup(html_passage, 'lxml')
+        text_passage = soup.get_text(separator=' ', strip=True)
+
+        print("---------------------")
+        print(text_passage)
+
+        # Print the Book 
+        book = data_response["data"]["passages"][0]["reference"]
+        print(book)
 
     except requests.exceptions.RequestException as e:
         # Handle any errors that occur during the API request
@@ -68,15 +73,6 @@ def get_random_verse():
 # Call the function to get a random verse
 get_random_verse()
 
-app = Flask(__name__)
-
-# @app.route('/')
-# def home():
-#     verse = get_random_verse()
-#     return render_template('index.html', verse=verse)
-
-if __name__ == '__main__':
-    app.run(debug=True)
 
 
 
