@@ -99,7 +99,7 @@ img[src="church.png"][alt="hellosign"] {
   }
 }
 
-/* working on the hamburger Menue --------------------------------------------*/
+/* working on the hamburger Menu --------------------------------------------*/
 
 /* this is for removing the top option menu after 1200px */
 @media (max-width: 1200px) {
@@ -287,22 +287,13 @@ img[src="church.png"][alt="hellosign"] {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  /* background-color: #6bd4c8; */
 
   /* The image portion of the style sheet */
-  background-image: url("Jesus.jpg"); /* Set the image as a background */
+  background-image: url("static/Images/Jesus.jpg"); /* Set the image as a background */
   background-size: cover; /* Adjust how the background image is displayed */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Don't repeat the background image */
-}
-
-#Jesus-Verse {
-  width: 50%;
-  height: 50%;
-  margin-left: 5%;
-  /* background-color: aliceblue; */
-
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 2.1vw;
 }
 
 /* create media query to center jesus on Phones */
@@ -328,7 +319,15 @@ img[src="church.png"][alt="hellosign"] {
   }
 }
 
-/* In this part of the project we work on the Jesus image which will contain a verse */
+/* API box for centering the Verse */
+/* #verse_container {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+} */
 
 /* This is the third page -------------------------------------------------------------- */
 .Third-Page {
