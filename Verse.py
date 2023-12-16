@@ -59,12 +59,13 @@ def get_random_verse():
         soup = BeautifulSoup(html_passage, 'lxml')
         text_passage = soup.get_text(separator=' ', strip=True)
 
-        print("---------------------")
-        print(text_passage)
+        # print("---------------------")
+        # print(text_passage)
 
         # Print the Book 
-        book = data_response["data"]["passages"][0]["reference"]
-        print(book)
+        book_refernce = data_response["data"]["passages"][0]["reference"]
+        # print(book)
+        return book_refernce, text_passage
 
     except requests.exceptions.RequestException as e:
         # Handle any errors that occur during the API request
@@ -74,7 +75,20 @@ def get_random_verse():
 get_random_verse()
 
 
+from flask import Flask, render_template
 
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    book_reference, text_passage = get_random_verse()
+    if book_reference and text_passage:
+        return render_template('index.html', verse=text_passage, reference=book_reference)
+    else:
+        return render_template('index.html', error="Unable to fetch verse")
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
 
 

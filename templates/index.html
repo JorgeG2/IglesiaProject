@@ -29,7 +29,11 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="Style.css" />
+    <!-- <link rel="stylesheet" href="Style.css" /> -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='CSS/Style.css') }}"
+    />
 
     <!-- Add these lines to your HTML's head section THIS IS BOOTSTRAP-->
     <link
@@ -139,16 +143,14 @@
     <!-- This is the Verse API page of the project aka the ministries  -->
 
     <div class="two-five">
-      <h1>Random Bible Verse</h1>
-      <p>{{ verse | safe }}</p>
-
-      <!-- <div id="Jesus-Verse">
-        <p>
-          "For God so loved the world that he gave his one and only Son, that
-          whoever believes in him shall not perish but have eternal life." -
-          John 3:16
-        </p>
-      </div> -->
+      <div id="verse_container">
+        {% if error %}
+        <p>{{ error }}</p>
+        {% else %}
+        <p>{{ reference }}</p>
+        <p>{{ verse }}</p>
+        {% endif %}
+      </div>
     </div>
 
     <!-- This is the third page of the project aka the ministries  -->
