@@ -21,6 +21,11 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans&display=swap"
       rel="stylesheet"
     />
+    <!-------Third Font--------->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- font for nav bar -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -45,11 +50,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <div class="First-Page">
+    <div
+      class="First-Page"
+      style="background-image: url('static/Images/newbackground.jpg')"
+    >
       <div class="Option-menu">
         <div id="logo">
           <img src="static/Images/logo.jpg" alt="chruch logo" />
         </div>
+
         <div id="options">
           <ul>
             <li><a href="#">About</a></li>
@@ -60,11 +69,11 @@
         </div>
       </div>
 
-      <!-- <div id="Welcome">
+      <div id="Welcome">
         <div id="bone">
-          <img src="church.png" alt="hellosign" />
+          <img src="static/Images/church.png" alt="hellosign" />
         </div>
-      </div> -->
+      </div>
     </div>
 
     <!-- This is the hamburger part its out of any containers in a fixed position------------------ -->
@@ -127,31 +136,6 @@
       </div>
     </div>
 
-    <div class="Youtube">
-      <div id="tv-box">
-        <iframe
-          width="1000px"
-          height="500px"
-          src="https://www.youtube.com/embed/QbYxk-pdbaU"
-          allowfullscreen
-        >
-        </iframe>
-      </div>
-    </div>
-
-    <!-- This is the Verse API page of the project aka the ministries  -->
-
-    <div class="two-five">
-      <!-- <div id="verse_container">
-        {% if error %}
-        <p>{{ error }}</p>
-        {% else %}
-        <p>{{ reference }}</p>
-        <p>{{ verse }}</p>
-        {% endif %}
-      </div> -->
-    </div>
-
     <!-- This is the third page of the project aka the ministries  -->
 
     <div class="Third-Page">
@@ -169,9 +153,47 @@
       </div>
     </div>
 
+    <div class="Youtube">
+      <div id="video_text">
+        <h1 id="video_title">Nuestro Servicio</h1>
+        <p id="video_paragraph">
+          Aqui puedes ver nuestro servicio en vivo todos los domingos a las
+          11:00 am
+        </p>
+      </div>
+      <div id="tv-box">
+        <iframe
+          width="1000px"
+          height="500px"
+          src="https://www.youtube.com/embed/QbYxk-pdbaU"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </div>
+
+    <!-- This is the Verse API page of the project aka the ministries  -->
+
+    <div
+      class="two-five"
+      style="background-image: url('static/Images/Jesus.jpg')"
+    >
+      <div class="dark-overlay"></div>
+
+      <div id="verse_container">
+        {% if error %}
+        <p>{{ error }}</p>
+        {% else %}
+        <p>{{ verse }}</p>
+        <!-- <p>{{ reference }}</p> -->
+
+        {% endif %}
+      </div>
+    </div>
+
     <!-- Beginning of the fourth page of the project -->
 
-    <div class="Fourth-Page">
+    <!-- <div class="Fourth-Page">
       <div id="side-left">
         <div id="top12">
           <h1 id="questionss">Tienes Preguntas</h1>
@@ -210,7 +232,6 @@
         </div>
       </div>
 
-      <!-- Here we will work on the right side of the 4th page -->
 
       <div id="side-right">
         <div id="top14">
@@ -248,7 +269,7 @@
           </form>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Bottom part of the webpage -->
     <div id="bottom-part">

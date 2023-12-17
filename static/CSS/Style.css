@@ -15,15 +15,12 @@
 
 /* Other CSS rules */
 /* ... */
+
 .First-Page {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 100vh;
-  background-image: url("newbackground.jpg");
-
-  backdrop-filter: blur(5px);
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -192,7 +189,7 @@ img[src="church.png"][alt="hellosign"] {
 #right-side {
   width: 40%;
   /* max-width: 800px;  */
-  height: auto;
+  height: 100%;
   max-height: 800px;
   /* overflow: scroll; */
 
@@ -203,8 +200,8 @@ img[src="church.png"][alt="hellosign"] {
 #left-side img {
   max-width: 100%;
   height: auto;
-  width: 100%; /* Set the width to 100% to maintain the 1:1 aspect ratio */
-  max-height: 100%; /* Ensure the height doesn't exceed 100% of the container */
+  /* max-height: 550px; */
+  width: auto; /* Set the width to 100% to maintain the 1:1 aspect ratio */
   border-radius: 27px;
   justify-content: center; /* This property is typically used with flex containers, not directly on images */
 }
@@ -221,14 +218,16 @@ img[src="church.png"][alt="hellosign"] {
   display: flex;
   justify-content: center;
   color: white;
-  font-family: "Noto Sans", sans-serif;
+  /* font-family: "Noto Sans", sans-serif; */
+  font-family: "Roboto", sans-serif; /* Slim and modern font */
+  font-weight: 300; /* Use a lighter font weight to compensate for the bold heading */
 }
 
 #bottom p {
-  font-size: 1.7vw;
+  font-size: 1.5vw;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .Second-Page {
     flex-direction: column-reverse; /* Change to a vertical layout for smaller screens */
     align-items: center; /* Center items vertically in the column layout */
@@ -246,7 +245,7 @@ img[src="church.png"][alt="hellosign"] {
   }
 
   #bottom p {
-    font-size: 3vw;
+    font-size: auto;
   }
 
   #left-side {
@@ -255,6 +254,18 @@ img[src="church.png"][alt="hellosign"] {
     margin-top: 20px;
   }
 }
+@media (min-width: 651px) and (max-width: 800px) {
+  #bottom p {
+    font-size: 2vw; /* Medium font size for medium screens */
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1050px) {
+  #bottom p {
+    font-size: 1.9vw; /* Medium font size for medium screens */
+  }
+}
+
 /* This is for the YouTube API -----------------------------------------*/
 
 .Youtube {
@@ -264,11 +275,21 @@ img[src="church.png"][alt="hellosign"] {
   padding-bottom: 25px;
   /* background-color: beige; */
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: chocolate;
+  background-color: #29434c;
 }
-
+#video_text {
+  width: 40%;
+  height: auto;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 50px;
+  padding-top: 25px;
+  margin-bottom: 25px;
+  color: white;
+  /* background-color: darkgreen; */
+  /* margin-left: 30px; */
+}
 #tv-box {
   width: 40%;
   height: 40%;
@@ -276,59 +297,53 @@ img[src="church.png"][alt="hellosign"] {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 10%;
   background-color: black;
 }
 
-/* Working on Jesus background---------------------------------------------------------- */
+/* ---------------------- Working on Jesus background ---------------------------------- */
 
 .two-five {
-  height: 50vh;
-  overflow: hidden;
   display: flex;
   justify-content: flex-start;
+  height: 50vh;
+  overflow: hidden;
   align-items: center;
-  /* background-color: #6bd4c8; */
 
   /* The image portion of the style sheet */
-  background-image: url("static/Images/Jesus.jpg"); /* Set the image as a background */
-  background-size: cover; /* Adjust how the background image is displayed */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Don't repeat the background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* create media query to center jesus on Phones */
 
-@media (max-width: 500px) {
-  #box-container {
-    flex-direction: column; /* Stack the boxes vertically */
-    align-items: center; /* Center the boxes horizontally */
-  }
+/* API box for centering the Verse */
 
-  #Mens {
-    width: 80%; /* Adjust the width as needed */
-    margin-bottom: 30px;
-  }
-
-  #Womens {
-    width: 80%; /* Adjust the width as needed */
-    margin-bottom: 30px;
-  }
-
-  #Youth {
-    width: 80%; /* Adjust the width as needed */
-  }
+#verse_container {
+  margin-left: 20%;
+  margin-right: auto;
+  text-align: center; /* Center-align text */
+  font-family: "Georgia", serif; /* Elegant, readable font */
+  font-size: 1.2em; /* Adjust font size as needed */
+  color: #333; /* Darker text for readability */
+  max-width: 600px; /* Maximum width for readability */
+  padding: 20px; /* Spacing inside the container */
+  background-color: #fff; /* Optional: background color */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  line-height: 1.6; /* Spacing between lines */
+  background-color: #eca1a6;
 }
 
-/* API box for centering the Verse */
-/* #verse_container {
-  width: 80%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: aqua;
-} */
-
+/*Media Query for verse container*/
+@media (max-width: 768px) {
+  #verse_container {
+    font-size: 1em; /* Smaller font on small devices */
+    padding: 15px;
+    max-width: 80%;
+  }
+}
 /* This is the third page -------------------------------------------------------------- */
 .Third-Page {
   background-color: #d49c6b;
@@ -390,6 +405,28 @@ img[src="church.png"][alt="hellosign"] {
   background-repeat: no-repeat;
 }
 
+/* -----------------Making Third page responsive----------------------- */
+@media (max-width: 500px) {
+  #box-container {
+    flex-direction: column; /* Stack the boxes vertically */
+    align-items: center; /* Center the boxes horizontally */
+  }
+
+  #Mens {
+    width: 80%; /* Adjust the width as needed */
+    margin-bottom: 30px;
+  }
+
+  #Womens {
+    width: 80%; /* Adjust the width as needed */
+    margin-bottom: 30px;
+  }
+
+  #Youth {
+    width: 80%; /* Adjust the width as needed */
+  }
+}
+
 /* This part is for page 4 which is prayer request and questions------------------------*/
 .Fourth-Page {
   background-color: #f1ebe5;
@@ -436,7 +473,8 @@ img[src="church.png"][alt="hellosign"] {
 }
 
 #myForms {
-  display: flex;
+  display: none;
+  /* display: flex; */
   justify-content: space-around;
   width: 85%; /* cant change width*/
   /* background-color: purple; */
@@ -528,7 +566,7 @@ img[src="church.png"][alt="hellosign"] {
 #bottom-part {
   width: auto;
   height: auto;
-  background-color: rgb(30, 32, 41);
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
