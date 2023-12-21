@@ -74,7 +74,7 @@ def get_random_verse():
 # Call the function to get a random verse
 get_random_verse()
 
-
+# Good job this actually is a decent project im proud of you -J
 from flask import Flask, render_template
 
 app = Flask(__name__)
