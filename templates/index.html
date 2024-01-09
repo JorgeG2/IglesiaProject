@@ -48,6 +48,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Adding AOS Library to document -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   </head>
   <body>
     <div
@@ -112,15 +119,15 @@
     <!-- This is the Second page of the website ---------------------------------- -->
 
     <div class="Second-Page">
-      <div id="left-side">
+      <div id="left-side" data-aos="fade-up">
         <img src="static/Images/Colossians.png" alt="verse" />
       </div>
       <div id="right-side">
-        <div id="top">
+        <div id="top" data-aos="fade-up" data-aos-delay="300">
           <p>Quienes Somos?</p>
         </div>
 
-        <div id="bottom">
+        <div id="bottom" data-aos="fade-up" data-aos-delay="600">
           <p>
             We are a Pentecostal church rooted in the vibrant community of
             Atlantic City. Our faith is deeply anchored in Pentecostal beliefs,
@@ -144,14 +151,17 @@
     <div class="Third-Page">
       <h1 id="Ministries">Nuestro Ministerios</h1>
       <div id="box-container">
-        <div id="Mens">
-          <img src="static/Images/mens.jpg" width="100%" height="100%" />
+        <div id="Mens" class="ministry-box" data-aos="fade-up" data-aos-delay="300>
+          <img src="static/Images/mens.jpg" alt="Men's Ministry" />
+          <div class="info">Men's Ministry</div>
         </div>
-        <div id="Womens">
-          <img src="static/Images/Womens.jpg" width="100%" height="100%" />
+        <div id="Womens" class="ministry-box">
+          <img src="static/Images/Womens.jpg" alt="Women's Ministry" />
+          <div class="info">Women's Ministry</div>
         </div>
-        <div id="Youth">
-          <img src="static/Images/Kids.jpg" width="100%" height="100%"
+        <div id="Youth" class="ministry-box">
+          <img src="static/Images/Kids.jpg" alt="Youth Ministry" />
+          <div class="info">Youth Ministry</div>
         </div>
       </div>
     </div>
@@ -194,85 +204,127 @@
       </div>
     </div>
 
-    <!-- Beginning of the fourth page of the project -->
-
-    <!-- <div class="Fourth-Page">
-      <div id="side-left">
-        <div id="top12">
-          <h1 id="questionss">Tienes Preguntas</h1>
-        </div>
-
-        <div id="bottom12">
-          <form id="myForms">
-            <div class="col1">
+    <!-- Beginning of the fourth page of the project=------------------------ -->
+    <div class="Fourth-Page">
+      <div class="container33">
+        <!-- Prayer Request Form -->
+        <div class="form-container">
+          <h2>Prayer Request Form</h2>
+          <form id="prayerRequestForm" class="row g-3">
+            <div class="col-md-6">
               <input
                 type="text"
                 class="form-control"
-                placeholder="First name"
+                id="prayerFirstName"
+                placeholder="First Name"
+                required
               />
             </div>
-
-            <div class="col1">
-              <input type="text" class="form-control" placeholder="Last name" />
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="form-control"
+                id="prayerLastName"
+                placeholder="Last Name"
+                required
+              />
             </div>
-          </form>
-        </div>
-
-        <div id="bottom13">
-          <form>
-            <div class="form-group">
-              <label for="question">Your Question</label>
+            <div class="col-12">
               <textarea
                 class="form-control"
-                id="question"
-                rows="4"
-                placeholder="Type your question here"
+                id="prayerRequest"
+                placeholder="Your Prayer Request"
+                rows="3"
+                required
               ></textarea>
             </div>
-
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
-      </div>
-
-
-      <div id="side-right">
-        <div id="top14">
-          <h3 id="prayerRequim">Necesitas Oracion?</h3>
-        </div>
-
-        <div id="bottom14">
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            <option value="1">Lust</option>
-            <option value="2">Envy</option>
-            <option value="3">Theft</option>
-            <option value="4">Adultry</option>
-            <option value="5">Grief</option>
-            <option value="6">Doubt</option>
-            <option value="7">Rebellion</option>
-            <option value="8">Three</option>
-          </select>
-        </div>
-
-        <div id="bottom15">
-          <form>
-            <div id="Elform-group">
-              <label for="question">Your Question</label>
-              <textarea
-                class="form-control"
-                id="question"
-                rows="4"
-                placeholder="Type your question here"
-              >
-              </textarea>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-primary">
+                Submit Request
+              </button>
             </div>
+          </form>
+        </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+        <!-- General Inquiry Form -->
+        <div class="form-container">
+          <h2>General Inquiry Form</h2>
+          <form id="generalInquiryForm" class="row g-3">
+            <div class="col-md-4">
+              <input
+                type="text"
+                class="form-control"
+                id="inquiryFirstName"
+                placeholder="First Name"
+                required
+              />
+            </div>
+            <div class="col-md-4">
+              <input
+                type="text"
+                class="form-control"
+                id="inquiryLastName"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+            <div class="col-md-4">
+              <input
+                type="email"
+                class="form-control"
+                id="inquiryEmail"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="col-12">
+              <input
+                type="tel"
+                class="form-control"
+                id="inquiryPhone"
+                placeholder="Phone Number"
+                required
+              />
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-primary">
+                Submit Inquiry
+              </button>
+            </div>
           </form>
         </div>
       </div>
-    </div> -->
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sendFormData = (formId, url) => {
+          const form = document.getElementById(formId);
+          form.addEventListener("submit", event => {
+            event.preventDefault();
+    
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => data[key] = value);
+    
+            fetch(url, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => alert(data.message))
+            .catch(error => console.error('Error:', error));
+          });
+        };
+    
+        sendFormData('prayerRequestForm', '/submit-prayer-request');
+        sendFormData('generalInquiryForm', '/submit-general-inquiry');
+      });
+    </script>
+    <!-- Include main.js if you have additional JavaScript -->
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
 
     <!-- Bottom part of the webpage -->
     <div id="bottom-part">
@@ -306,6 +358,10 @@
       <!-- right side of the footer -->
       <div id="container3r"></div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
 <!-- end of the project -->

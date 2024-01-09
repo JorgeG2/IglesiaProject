@@ -1,6 +1,8 @@
 import requests
 import random
 from bs4 import BeautifulSoup
+from flask import Flask, render_template, request, jsonify
+
 
 # Define the API key and Bible ID
 API_KEY = '80507ab8dcb312bef4bcbdd4805808a1'
@@ -86,6 +88,21 @@ def home():
         return render_template('index.html', verse=text_passage, reference=book_reference)
     else:
         return render_template('index.html', error="Unable to fetch verse")
+    
+# Route for submitting prayer request
+@app.route('/submit-prayer-request', methods=['POST'])
+def submit_prayer_request():
+    data = request.json
+    print("Prayer Request:", data)  # For demonstration; replace with your data handling logic
+    return jsonify({'message': 'Prayer request received'})
+
+# Route for submitting general inquiry
+@app.route('/submit-general-inquiry', methods=['POST'])
+def submit_general_inquiry():
+    data = request.json
+    print("General Inquiry:", data)  # For demonstration; replace with your data handling logic
+    return jsonify({'message': 'General inquiry received'})
+
 
 if __name__ == '__main__':
     app.run(debug=True)
