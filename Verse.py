@@ -104,6 +104,13 @@ def submit_general_inquiry():
     return jsonify({'message': 'General inquiry received'})
 
 
+# render statement page
+@app.route('/statement')
+def show_statement():
+    return render_template('statement.html')
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 
