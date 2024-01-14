@@ -1,8 +1,41 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.Option-menu {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 8px; */
+  /* padding-bottom: 90px; */
+}
+
+.Option-menu ul {
+  height: 70px;
+  display: flex;
+  list-style: none;
+  margin-right: 45px;
+}
+
+.Option-menu ul li {
+  margin-right: 35px;
+  display: flex;
+  align-items: center;
+}
+.Option-menu ul li a {
+  color: beige;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#logo img {
+  margin-top: 5px;
+  width: 50px;
+  height: 50px;
+  margin-left: 37px;
 }
 
 .Main-Header {
@@ -23,9 +56,10 @@
 }
 
 #text {
+  font-family: "Lato", sans-serif;
   width: 70%;
   margin-top: 30px;
-  text-align: center; /* Center-align text within the element */
+  text-align: center;
 }
 
 .flag {

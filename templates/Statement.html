@@ -4,9 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Statement</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- <link rel="stylesheet" href="Style2.css" /> -->
-    <link rel="stylesheet" href="Style2.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/Style2.css') }}"
+    />
   </head>
+
+  <div class="Option-menu">
+    <div id="logo">
+      <img src="static/Images/logo.jpg" alt="chruch logo" />
+    </div>
+
+    <div id="options">
+      <ul>
+        <li><a href="/Statement">About</a></li>
+        <li><a href="#">Watch</a></li>
+        <li><a href="#">Ministries</a></li>
+        <li><a href="#">Prayers</a></li>
+      </ul>
+    </div>
+  </div>
 
   <div class="Main-Header">
     <h1>Statement of Faith</h1>

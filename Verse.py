@@ -105,7 +105,7 @@ def submit_general_inquiry():
 
 
 # render statement page
-@app.route('/statement')
+@app.route('/Statement')
 def show_statement():
     return render_template('statement.html')
 
