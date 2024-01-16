@@ -8,6 +8,7 @@
   height: 60px;
   display: flex;
   justify-content: space-between;
+  background-color: cadetblue;
   /* margin-top: 8px; */
   /* padding-bottom: 90px; */
 }
@@ -38,21 +39,42 @@
   margin-left: 37px;
 }
 
-.Main-Header {
-  background-color: #333; /* Add your desired background color */
-  color: #bc1111; /* Add your desired text color */
-  text-align: center;
-  padding: 20px 0;
-}
-
-.Body {
+/* Starting the body with both sides */
+.main-container {
   width: 100%;
-  height: auto;
+  /* height: auto; */
   display: flex;
   justify-content: center;
-  flex-direction: column; /* Added to center-align content vertically */
-  align-items: center; /* Added to center-align content horizontally */
-  padding: 20px; /* Added some padding for spacing */
+  overflow: hidden;
+}
+
+.image-container {
+  width: 50%;
+  height: calc(
+    100vh - 60px
+  ); /* Full viewport height minus the options menu height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Add this line to hide overflow */
+}
+.image-container img {
+  /* width: 100%;
+  height: auto; */
+  width: 100vw; /* Full viewport width */
+  height: calc(100vh - 50px); /* Adjusted for the options menu */
+  position: relative; /* Allows for position adjustment */
+  left: 50%; /* Shift the image to the left */
+  transform: translateX(-50%); /* Center the image in viewport */
+}
+
+.right-side {
+  width: 50%;
+  height: calc(100vh - 60px); /* Adjust height if needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #text {
@@ -62,13 +84,13 @@
   text-align: center;
 }
 
-.flag {
+/* .flag {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-}
+} */
 
-.flag img {
+/* .flag img {
   max-width: 100%;
   height: auto;
-}
+} */
