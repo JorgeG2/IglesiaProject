@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iglesia Camino al Cielo</title>
+    <!-- Pico CSS Framework -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"> -->
+
+      <!-- Adding AOS Library to document -->
+      <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+      />
 
     <!-- Font for the Intro -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -49,11 +57,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- Adding AOS Library to document -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-      rel="stylesheet"
-    />
+  
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   </head>
   <body>
@@ -205,96 +209,27 @@
     </div>
 
     <!-- Beginning of the fourth page of the project=------------------------ -->
-    <div class="Fourth-Page">
-      <div class="container33">
-        <!-- Prayer Request Form -->
-        <div class="form-container">
-          <h2>Prayer Request Form</h2>
-          <form id="prayerRequestForm" class="row g-3">
-            <div class="col-md-6">
-              <input
-                type="text"
-                class="form-control"
-                id="prayerFirstName"
-                placeholder="First Name"
-                required
-              />
-            </div>
-            <div class="col-md-6">
-              <input
-                type="text"
-                class="form-control"
-                id="prayerLastName"
-                placeholder="Last Name"
-                required
-              />
-            </div>
-            <div class="col-12">
-              <textarea
-                class="form-control"
-                id="prayerRequest"
-                placeholder="Your Prayer Request"
-                rows="3"
-                required
-              ></textarea>
-            </div>
-            <div class="col-12 text-center">
-              <button type="submit" class="btn btn-primary">
-                Submit Request
-              </button>
-            </div>
-          </form>
-        </div>
-
-        <!-- General Inquiry Form -->
-        <div class="form-container">
-          <h2>General Inquiry Form</h2>
-          <form id="generalInquiryForm" class="row g-3">
-            <div class="col-md-4">
-              <input
-                type="text"
-                class="form-control"
-                id="inquiryFirstName"
-                placeholder="First Name"
-                required
-              />
-            </div>
-            <div class="col-md-4">
-              <input
-                type="text"
-                class="form-control"
-                id="inquiryLastName"
-                placeholder="Last Name"
-                required
-              />
-            </div>
-            <div class="col-md-4">
-              <input
-                type="email"
-                class="form-control"
-                id="inquiryEmail"
-                placeholder="Email Address"
-                required
-              />
-            </div>
-            <div class="col-12">
-              <input
-                type="tel"
-                class="form-control"
-                id="inquiryPhone"
-                placeholder="Phone Number"
-                required
-              />
-            </div>
-            <div class="col-12 text-center">
-              <button type="submit" class="btn btn-primary">
-                Submit Inquiry
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+    <div class="form-container">
+      <form id="contactForm">
+          <div class="form-group">
+              <label for="firstName">First Name:</label>
+              <input type="text" id="firstName" name="firstName" required>
+          </div>
+          <div class="form-group">
+              <label for="lastName">Last Name:</label>
+              <input type="text" id="lastName" name="lastName" required>
+          </div>
+          <div class="form-group">
+              <label for="phone">Phone Number:</label>
+              <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+          <button type="submit">Submit</button>
+      </form>
+  </div>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const sendFormData = (formId, url) => {

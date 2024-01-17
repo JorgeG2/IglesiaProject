@@ -59,38 +59,26 @@
   overflow: hidden; /* Add this line to hide overflow */
 }
 .image-container img {
-  /* width: 100%;
-  height: auto; */
-  width: 100vw; /* Full viewport width */
-  height: calc(100vh - 50px); /* Adjusted for the options menu */
-  position: relative; /* Allows for position adjustment */
-  left: 50%; /* Shift the image to the left */
-  transform: translateX(-50%); /* Center the image in viewport */
+  width: 780px; /* Set a fixed width */
+  height: auto; /* Set a fixed height */
+  border-radius: 1%; /* The border-radius makes the square image look round */
+  object-fit: cover; /* Ensures the image covers the area and is cropped if necessary */
+  object-position: center; /* Adjusts the focus area of the image */
 }
 
 .right-side {
   width: 50%;
-  height: calc(100vh - 60px); /* Adjust height if needed */
+  height: calc(100vh - 110px); /* Adjust height if needed */
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  margin-top: 50px;
 }
 
 #text {
   font-family: "Lato", sans-serif;
-  width: 70%;
+  width: 90%;
   margin-top: 30px;
   text-align: center;
 }
-
-/* .flag {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-} */
-
-/* .flag img {
-  max-width: 100%;
-  height: auto;
-} */
