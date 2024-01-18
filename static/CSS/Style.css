@@ -472,47 +472,70 @@ img[src="church.png"][alt="hellosign"] {
   }
 }
 
-/* This part is for page 4 which is prayer request and questions------------------------*/
-.form-container {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* This part is for page 4 which is genernal inqueries------------------------*/
+.Fourth-Page {
   width: 100%;
-  max-width: 400px;
+  height: auto;
+  background-color: #659bdb;
+  /* display: flex; */
+  /* justify-content: center; */
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="tel"] {
+.UDP {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  height: auto;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  /* background-color: bisque; */
 }
 
-button {
+.TCP {
   width: 100%;
-  padding: 10px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: bisque; */
+}
+
+.subscription-form {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.subscription-form > .input-name,
+.subscription-form > .input-phone,
+.subscription-form > .input-email {
+  flex: 1 1 auto;
+  margin: 0.5rem;
+}
+
+.subscription-form > .input-phone {
+  flex-grow: 2;
+}
+
+.subscription-form > input {
   border: none;
-  background-color: #007bff;
+  background: hsl(0, 0%, 93%);
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+}
+
+.input-submit {
+  background: hotpink;
   color: white;
-  border-radius: 4px;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 0.75rem 0.5rem -0.5rem hsl(0, 50%, 80%);
+  margin: 0.5rem;
+  border: none;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #0056b3;
-}
 /* Last part of the webpage -----------------------------------------------------------*/
 
 #bottom-part {

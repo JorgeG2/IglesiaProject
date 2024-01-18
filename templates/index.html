@@ -209,55 +209,23 @@
     </div>
 
     <!-- Beginning of the fourth page of the project=------------------------ -->
-    <div class="form-container">
-      <form id="contactForm">
-          <div class="form-group">
-              <label for="firstName">First Name:</label>
-              <input type="text" id="firstName" name="firstName" required>
-          </div>
-          <div class="form-group">
-              <label for="lastName">Last Name:</label>
-              <input type="text" id="lastName" name="lastName" required>
-          </div>
-          <div class="form-group">
-              <label for="phone">Phone Number:</label>
-              <input type="tel" id="phone" name="phone" required>
-          </div>
-          <div class="form-group">
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required>
-          </div>
-          <button type="submit">Submit</button>
+  <div class="Fourth-Page">
+    <div class="UDP">
+      <h1 id="contact-us">Contactanos</h1>
+    </div>
+    <div class="TCP">
+      <form class="subscription-form">
+        <input type="text" class="input-name" placeholder="Name">
+        <input type="tel" class="input-phone" placeholder="Phone">
+        <input type="email" class="input-email" placeholder="Email Address">
+        <input type="submit" class="input-submit" value="Subscribe">
       </form>
+    </div>
   </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const sendFormData = (formId, url) => {
-          const form = document.getElementById(formId);
-          form.addEventListener("submit", event => {
-            event.preventDefault();
+  
+
+  
     
-            const formData = new FormData(form);
-            const data = {};
-            formData.forEach((value, key) => data[key] = value);
-    
-            fetch(url, {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(data => alert(data.message))
-            .catch(error => console.error('Error:', error));
-          });
-        };
-    
-        sendFormData('prayerRequestForm', '/submit-prayer-request');
-        sendFormData('generalInquiryForm', '/submit-general-inquiry');
-      });
-    </script>
     <!-- Include main.js if you have additional JavaScript -->
     <script src="{{ url_for('static', filename='main.js') }}"></script>
 
