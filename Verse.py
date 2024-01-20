@@ -1,7 +1,9 @@
 import requests
 import random
 from bs4 import BeautifulSoup
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, url_for, redirect
+import json
+
 
 
 # Define the API key and Bible ID
@@ -76,11 +78,12 @@ def get_random_verse():
 # Call the function to get a random verse
 get_random_verse()
 
-# Good job this actually is a decent project im proud of you -J
-from flask import Flask, render_template
+# # Good job this actually is a decent project im proud of you -J
+# from flask import Flask, render_template
 
 app = Flask(__name__)
 
+#for getting the bible verse and reference
 @app.route('/')
 def home():
     book_reference, text_passage = get_random_verse()
@@ -89,19 +92,27 @@ def home():
     else:
         return render_template('index.html', error="Unable to fetch verse")
     
-# Route for submitting prayer request
-@app.route('/submit-prayer-request', methods=['POST'])
-def submit_prayer_request():
-    data = request.json
-    print("Prayer Request:", data)  # For demonstration; replace with your data handling logic
-    return jsonify({'message': 'Prayer request received'})
 
-# Route for submitting general inquiry
-@app.route('/submit-general-inquiry', methods=['POST'])
-def submit_general_inquiry():
-    data = request.json
-    print("General Inquiry:", data)  # For demonstration; replace with your data handling logic
-    return jsonify({'message': 'General inquiry received'})
+
+submissions = {}
+
+@app.route('/submit-form', methods=['POST'])
+def submit_form():
+    global submissions
+    submission_id = len(submissions) + 1  # Creating a unique ID for each submission
+    form_data_dict = request.form.to_dict()
+    
+    submissions[submission_id] = form_data_dict  # Storing the form data under the unique ID
+    
+    print("Current Submissions:", submissions)  # Debugging: print all submissions
+
+     # Save to file
+    with open('submissions.txt', 'w') as file:
+        json.dump(submissions, file, indent=4)  # 'indent' for pretty printing
+
+    # Redirect back to home page or the page with the form
+    return redirect(url_for('home'))  # 'home' is the function name of your home route
+
 
 
 # render statement page
@@ -111,8 +122,10 @@ def show_statement():
 
 
 
+# if __name__ == '__main__':
+#     app.run(debug=True)
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5001)  # Replace 5001 with any available port number
 
 
 

@@ -209,19 +209,22 @@
     </div>
 
     <!-- Beginning of the fourth page of the project=------------------------ -->
-  <div class="Fourth-Page">
-    <div class="UDP">
-      <h1 id="contact-us">Contactanos</h1>
-    </div>
-    <div class="TCP">
-      <form class="subscription-form">
-        <input type="text" class="input-name" placeholder="Name">
-        <input type="tel" class="input-phone" placeholder="Phone">
-        <input type="email" class="input-email" placeholder="Email Address">
-        <input type="submit" class="input-submit" value="Subscribe">
-      </form>
-    </div>
+    <div class="Fourth-Page">
+      <div class="UDP">
+        <h1 id="contact-us">Contactanos</h1>
+      </div>
+      <div class="TCP">
+        <form class="subscription-form" method="post" action="/submit-form">
+          <input type="text" name="name" class="input-name" placeholder="Name">
+          <input type="tel" name="phone" class="input-phone" placeholder="Phone">
+          <input type="email" name="email" class="input-email" placeholder="Email Address">
+          <input type="submit" class="input-submit" value="Subscribe">
+        </form>
+      </div>
   </div>
+  
+
+  
 
   <!-- This is where we set the asychronnous javascript -->
   <script></script>
