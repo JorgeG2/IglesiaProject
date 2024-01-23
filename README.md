@@ -63,7 +63,7 @@ If you would like to contribute to this project, please follow these guidelines:
 
 - Submit pull requests with your proposed changes.
 - Adhere to the coding standards and conventions used in the project.
-- For any queries or assistance, contact [Your Name] at [Your Email Address].
+- For any queries or assistance, contact Jorge Gonzales at Jorgegonzales191421@Gmail.com.
 
 ## Contact
 
