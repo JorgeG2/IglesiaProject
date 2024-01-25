@@ -96,6 +96,23 @@ def home():
 
 submissions = {}
 
+# @app.route('/submit-form', methods=['POST'])
+# def submit_form():
+#     global submissions
+#     submission_id = len(submissions) + 1  # Creating a unique ID for each submission
+#     form_data_dict = request.form.to_dict()
+    
+#     submissions[submission_id] = form_data_dict  # Storing the form data under the unique ID
+    
+#     print("Current Submissions:", submissions)  # Debugging: print all submissions
+
+#      # Save to file
+#     with open('submissions.txt', 'w') as file:
+#         json.dump(submissions, file, indent=4)  # 'indent' for pretty printing
+
+#     # Redirect back to home page or the page with the form
+#     return redirect(url_for('home'))  # 'home' is the function name of your home route
+
 @app.route('/submit-form', methods=['POST'])
 def submit_form():
     global submissions
@@ -106,12 +123,15 @@ def submit_form():
     
     print("Current Submissions:", submissions)  # Debugging: print all submissions
 
-     # Save to file
+    # Save to file
     with open('submissions.txt', 'w') as file:
         json.dump(submissions, file, indent=4)  # 'indent' for pretty printing
 
-    # Redirect back to home page or the page with the form
-    return redirect(url_for('home'))  # 'home' is the function name of your home route
+    # Return a JSON response for AJAX
+    return jsonify({'message': 'Form submitted successfully', 'submission_id': submission_id})
+
+# Other routes...
+
 
 
 
