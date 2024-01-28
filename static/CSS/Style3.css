@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Option-menu {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  background-color: cadetblue;
+  /* margin-top: 8px; */
+  /* padding-bottom: 90px; */
+}
+
+.Option-menu ul {
+  height: 70px;
+  display: flex;
+  list-style: none;
+  margin-right: 45px;
+}
+
+.Option-menu ul li {
+  margin-right: 35px;
+  display: flex;
+  align-items: center;
+}
+.Option-menu ul li a {
+  color: beige;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#logo img {
+  margin-top: 5px;
+  width: 50px;
+  height: 50px;
+  margin-left: 37px;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Centers child elements horizontally */
+  align-items: center; /* Centers child elements vertically if needed */
+  width: 100%;
+  padding-bottom: 90px;
+}
+/*This is the styling for the headers */
+#poa1 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding-top: 30px;
+}
+#poa2 {
+  font-family: "Noto Sans", sans-serif;
+  margin-bottom: 20px;
+}
+.psgbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+/* we will decorate the passage text in a dynamic way */
+#psg {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+}
+
+/* to center the body of the website */
+.grids {
+  display: flex;
+  justify-content: center;
+  max-width: 1100px;
+}
+/* Styles for the figure container */
+#image_container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Styles for the image inside the figure container */
+#image_container img {
+  max-width: 1100px;
+  height: auto;
+}

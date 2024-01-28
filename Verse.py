@@ -96,22 +96,6 @@ def home():
 
 submissions = {}
 
-# @app.route('/submit-form', methods=['POST'])
-# def submit_form():
-#     global submissions
-#     submission_id = len(submissions) + 1  # Creating a unique ID for each submission
-#     form_data_dict = request.form.to_dict()
-    
-#     submissions[submission_id] = form_data_dict  # Storing the form data under the unique ID
-    
-#     print("Current Submissions:", submissions)  # Debugging: print all submissions
-
-#      # Save to file
-#     with open('submissions.txt', 'w') as file:
-#         json.dump(submissions, file, indent=4)  # 'indent' for pretty printing
-
-#     # Redirect back to home page or the page with the form
-#     return redirect(url_for('home'))  # 'home' is the function name of your home route
 
 @app.route('/submit-form', methods=['POST'])
 def submit_form():
@@ -130,8 +114,36 @@ def submit_form():
     # Return a JSON response for AJAX
     return jsonify({'message': 'Form submitted successfully', 'submission_id': submission_id})
 
-# Other routes...
 
+
+form_submissions = {}
+
+@app.route('/another-route', methods=['POST'])
+def submit_another_form():
+    global form_submissions
+    submission_id = len(form_submissions) + 1  # Creating a unique ID for each submission
+
+    name = request.form.get('name')
+    email = request.form.get('email')
+    prayer = request.form.get('prayer')
+
+    if name and email and prayer:
+        form_submissions[submission_id] = {
+            'name': name,
+            'email': email,
+            'prayer': prayer
+        }
+    
+        # Debugging: Print the updated form_submissions
+        print(json.dumps(form_submissions, indent=4))
+
+        # Write data to a file or process it as needed
+        with open('form_submissions.txt', 'w') as file:
+            json.dump(form_submissions, file, indent=4)
+
+        return jsonify({'message': 'Form submitted successfully', 'submission_id': submission_id})
+    else:
+        return jsonify({'message': 'Empty submission received'})
 
 
 
@@ -140,6 +152,10 @@ def submit_form():
 def show_statement():
     return render_template('statement.html')
 
+#render the Prayers page 
+@app.route('/Prayers')
+def show_prayers():
+    return render_template('Prayers.html')
 
 
 # if __name__ == '__main__':

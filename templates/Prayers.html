@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/Style3.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Prayer Section</title>
+  </head>
+  <body>
+    <!-- Hello -->
+    <!-- Top part of page where links are -->
+    <div class="Option-menu">
+      <div id="logo">
+        <img src="static/Images/logo.jpg" alt="chruch logo" />
+      </div>
+
+      <div id="options">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/Prayers">Prayers</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <main class="container">
+      <div class="grids">
+        <section>
+          <hgroup class="main header">
+            <h2 id="poa1">The Power of Prayer</h2>
+            <h3 id="poa2">Uniting in Faith and Purpose</h3>
+          </hgroup>
+          <div class="psgbox">
+            <p id="psg">
+              Prayer is a powerful tool that not only connects us with God but
+              also unites us as a community. It's a time to share our hopes,
+              fears, and dreams, and to support one another in faith and love.
+              Through prayer, we find strength and guidance, and we learn the
+              importance of compassion and understanding. Let's embrace the
+              power of prayer to bring us closer together and to deepen our
+              connection with the divine.
+            </p>
+          </div>
+          <figure id="image_container">
+            <img src="static/Images/Prayerf.jpg" alt="Praying Image" />
+          </figure>
+
+          <!--  -->
+          <!-- <form
+            class="something"
+            id="myForm"
+            action="/another-route"
+            method="post"
+          >
+            <div class="form-group">
+              <label for="exampleInputName">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputName"
+                aria-describedby="emailHelp"
+                placeholder="Enter name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="enterPrayer">Escribe tu Oracion</label>
+              <textarea
+                class="form-control"
+                id="enterPrayer"
+                rows="3"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form> -->
+          <form
+            class="something"
+            id="myForm"
+            action="/another-route"
+            method="post"
+          >
+            <div class="form-group">
+              <label for="exampleInputName">Name</label>
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                id="exampleInputName"
+                placeholder="Enter name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                placeholder="Enter email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="enterPrayer">Escribe tu Oracion</label>
+              <textarea
+                class="form-control"
+                name="prayer"
+                id="enterPrayer"
+                rows="3"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+          <!-----------------------------Working on the ajax code -->
+
+          <!-- ------------------------------------------------------ -->
+        </section>
+      </div>
+    </main>
+    <footer class="container"></footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
