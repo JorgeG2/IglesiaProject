@@ -118,6 +118,7 @@ def submit_form():
 
 form_submissions = {}
 
+#Here we are going to send the form data to a database with SQlite 
 @app.route('/another-route', methods=['POST'])
 def submit_another_form():
     global form_submissions
