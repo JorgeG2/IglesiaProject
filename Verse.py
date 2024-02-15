@@ -13,6 +13,8 @@ db_config = {
 }
 
 
+
+
 # Define the API key and Bible ID
 API_KEY = '80507ab8dcb312bef4bcbdd4805808a1'
 BIBLE_ID = '592420522e16049f-01'
@@ -100,7 +102,7 @@ def home():
         return render_template('index.html', error="Unable to fetch verse")
     
 
-
+# ----------------- DATABASE -----------------
 submissions = {}
 
 # GENERAL FORM
