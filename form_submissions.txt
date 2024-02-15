@@ -1,17 +1,7 @@
 {
     "1": {
-        "name": "Jose Luis ",
-        "email": "lachambadeLuis342@Gmail.com",
-        "prayer": "I have been struggling with lust and suicidal thoughts and anger"
-    },
-    "2": {
-        "name": "Jose Luis ",
-        "email": "lachambadeLuis342@Gmail.com",
-        "prayer": "I have been struggling with lust and suicidal thoughts and anger"
-    },
-    "3": {
-        "name": "Jose Luis ",
-        "email": "lachambadeLuis342@Gmail.com",
-        "prayer": "I have been struggling with lust and suicidal thoughts and anger"
+        "name": "Jorge Gonzales",
+        "email": "Jorgegonzales191421@Gmail.com",
+        "prayer": "IUYYUIGYGYI"
     }
 }

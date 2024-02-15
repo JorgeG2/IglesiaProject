@@ -3,7 +3,14 @@ import random
 from bs4 import BeautifulSoup
 from flask import Flask, render_template, request, jsonify, url_for, redirect
 import json
+import mysql.connector
 
+db_config = {
+    'user': 'root',
+    'password': 'Manchester10!',
+    'host': 'localhost',
+    'database': 'ChurchDatabase'
+}
 
 
 # Define the API key and Bible ID
@@ -96,7 +103,7 @@ def home():
 
 submissions = {}
 
-
+# GENERAL FORM
 @app.route('/submit-form', methods=['POST'])
 def submit_form():
     global submissions
@@ -118,7 +125,7 @@ def submit_form():
 
 form_submissions = {}
 
-#Here we are going to send the form data to a database with SQlite 
+#PRAYERS 
 @app.route('/another-route', methods=['POST'])
 def submit_another_form():
     global form_submissions
