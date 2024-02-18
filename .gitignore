@@ -1,6 +1,10 @@
 # Ignore virtual environment
 myenv/
 
+#api keys
+config.py
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

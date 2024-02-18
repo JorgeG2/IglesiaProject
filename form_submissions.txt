@@ -1,7 +1,0 @@
-{
-    "1": {
-        "name": "Jorge Gonzales",
-        "email": "Jorgegonzales191421@Gmail.com",
-        "prayer": "IUYYUIGYGYI"
-    }
-}

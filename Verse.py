@@ -2,8 +2,10 @@ import requests
 import random
 from bs4 import BeautifulSoup
 from flask import Flask, render_template, request, jsonify, url_for, redirect
-import json
 import mysql.connector
+from config import API_KEY
+
+
 
 db_config = {
     'user': 'root',
@@ -16,7 +18,6 @@ db_config = {
 
 
 # Define the API key and Bible ID
-API_KEY = '80507ab8dcb312bef4bcbdd4805808a1'
 BIBLE_ID = '592420522e16049f-01'
 
 # Define an array of Bible verses
@@ -104,24 +105,6 @@ def home():
 
 # ----------------- DATABASE -----------------
 submissions = {}
-
-# GENERAL FORM
-# @app.route('/submit-form', methods=['POST'])
-# def submit_form():
-#     global submissions
-#     submission_id = len(submissions) + 1  # Creating a unique ID for each submission
-#     form_data_dict = request.form.to_dict()
-    
-#     submissions[submission_id] = form_data_dict  # Storing the form data under the unique ID
-    
-#     print("Current Submissions:", submissions)  # Debugging: print all submissions
-
-#     # Save to file
-#     with open('submissions.txt', 'w') as file:
-#         json.dump(submissions, file, indent=4)  # 'indent' for pretty printing
-
-#     # Return a JSON response for AJAX
-#     return jsonify({'message': 'Form submitted successfully', 'submission_id': submission_id})
 
 
 @app.route('/submit-form', methods=['POST'])
@@ -216,7 +199,7 @@ def show_prayers():
 # if __name__ == '__main__':
 #     app.run(debug=True)
 if __name__ == '__main__':
-    app.run(debug=True, port=5003)  # Replace 5001 with any available port number
+    app.run(debug=True, port=5001)  # Replace 5001 with any available port number
 
 
 
