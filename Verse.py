@@ -3,17 +3,8 @@ import random
 from bs4 import BeautifulSoup
 from flask import Flask, render_template, request, jsonify, url_for, redirect
 import mysql.connector
-from config import API_KEY
-
-
-
-db_config = {
-    'user': 'root',
-    'password': 'Manchester10!',
-    'host': 'localhost',
-    'database': 'ChurchDatabase'
-}
-
+from config import API_KEY, DB_CONFIG
+from mysql.connector.errors import Error
 
 
 
@@ -115,7 +106,7 @@ def submit_form():
 
     try:
         # Establish a database connection
-        conn = mysql.connector.connect(**db_config)
+        conn = mysql.connector.connect(**DB_CONFIG)
         cursor = conn.cursor()
 
         # SQL query to insert the new general inquiry
@@ -157,7 +148,7 @@ def submit_another_form():
     if name and email and prayer:
         try:
             # Establish a database connection
-            conn = mysql.connector.connect(**db_config)
+            conn = mysql.connector.connect(**DB_CONFIG)
             cursor = conn.cursor()
 
             # Prepare the INSERT statement
@@ -195,7 +186,15 @@ def show_statement():
 def show_prayers():
     return render_template('Prayers.html')
 
+#render the About for hidden page
+@app.route('/habout')
+def show_statements():
+    return render_template('statement.html')
 
+#render the Prayers for hidden page
+@app.route('/hprayer')
+def show_prayerss():
+    return render_template('Prayers.html')
 # if __name__ == '__main__':
 #     app.run(debug=True)
 if __name__ == '__main__':

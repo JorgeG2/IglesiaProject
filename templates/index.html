@@ -8,11 +8,11 @@
     <!-- Pico CSS Framework -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"> -->
 
-      <!-- Adding AOS Library to document -->
-      <link
+    <!-- Adding AOS Library to document -->
+    <link
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
       rel="stylesheet"
-      />
+    />
 
     <!-- Font for the Intro -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -57,7 +57,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   </head>
   <body>
@@ -73,8 +72,8 @@
         <div id="options">
           <ul>
             <li><a href="/Statement">About</a></li>
-            <li><a href="#">Watch</a></li>
-            <li><a href="#">Ministries</a></li>
+            <!-- <li><a href="#">Watch</a></li>
+            <li><a href="#">Ministries</a></li> -->
             <li><a href="/Prayers">Prayers</a></li>
           </ul>
         </div>
@@ -92,10 +91,10 @@
 
     <div id="hidden-menu">
       <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Watch</a></li>
-        <li><a href="#">Ministries</a></li>
-        <li><a href="#">Prayers</a></li>
+        <li><a href="/habout">About</a></li>
+        <!-- <li><a href="#">Watch</a></li>
+        <li><a href="#">Ministries</a></li> -->
+        <li><a href="/hprayer">Prayers</a></li>
       </ul>
     </div>
     <!-- </h1> -->
@@ -155,7 +154,7 @@
     <div class="Third-Page">
       <h1 id="Ministries">Nuestro Ministerios</h1>
       <div id="box-container">
-        <div id="Mens" class="ministry-box" data-aos="fade-up" data-aos-delay="300>
+        <div id="Mens" class="ministry-box">
           <img src="static/Images/mens.jpg" alt="Men's Ministry" />
           <div class="info">Men's Ministry</div>
         </div>
@@ -214,52 +213,64 @@
         <h1 id="contact-us">Contactanos</h1>
       </div>
       <div class="TCP">
-        <form class="subscription-form" method="post" action="/submit-form" id="contactForm">
-        <!-- <form class="subscription-form" method="post" action="/submit-form"> -->
-          <input type="text" name="name" class="input-name" placeholder="Name">
-          <input type="tel" name="phone" class="input-phone" placeholder="Phone">
-          <input type="email" name="email" class="input-email" placeholder="Email Address">
-          <input type="submit" class="input-submit" value="Subscribe">
+        <form
+          class="subscription-form"
+          method="post"
+          action="/submit-form"
+          id="contactForm"
+        >
+          <!-- <form class="subscription-form" method="post" action="/submit-form"> -->
+          <input
+            type="text"
+            name="name"
+            class="input-name"
+            placeholder="Name"
+          />
+          <input
+            type="tel"
+            name="phone"
+            class="input-phone"
+            placeholder="Phone"
+          />
+          <input
+            type="email"
+            name="email"
+            class="input-email"
+            placeholder="Email Address"
+          />
+          <input type="submit" class="input-submit" value="Subscribe" />
         </form>
       </div>
-  </div>
-  
+    </div>
 
-  
+    <!-- This is where we set the asychronnous javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <!-- This is where we set the asychronnous javascript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#contactForm").submit(function (event) {
+          event.preventDefault(); // Prevent the default form submit
+          var formData = $(this).serialize(); // Serialize form data
 
-  <script>
-
-    $(document).ready(function(){
-        $('#contactForm').submit(function(event){
-            event.preventDefault(); // Prevent the default form submit
-            var formData = $(this).serialize(); // Serialize form data
-
-            $.ajax({
-                type: 'POST',
-                url: '/submit-form',
-                data: formData,
-                success: function(response){
-                    // Handle success (e.g., display a success message)
-                    alert('Form submitted successfully! Submission ID: ' + response.submission_id);
-                },
-                error: function(xhr, status, error){
-                    // Handle error
-                    alert('Error submitting form: ' + error);
-                }
-            });
+          $.ajax({
+            type: "POST",
+            url: "/submit-form",
+            data: formData,
+            success: function (response) {
+              // Handle success (e.g., display a success message)
+              alert(
+                "Form submitted successfully! Submission ID: " +
+                  response.submission_id
+              );
+            },
+            error: function (xhr, status, error) {
+              // Handle error
+              alert("Error submitting form: " + error);
+            },
+          });
         });
-    });
-
-  </script>
-  
-
-  
-    
-    <!-- Include main.js if you have additional JavaScript -->
-    <!-- <script src="{{ url_for('static', filename='main.js') }}"></script> -->
+      });
+    </script>
 
     <!-- Bottom part of the webpage -->
     <div id="bottom-part">
