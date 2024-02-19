@@ -195,10 +195,10 @@ def show_statements():
 @app.route('/hprayer')
 def show_prayerss():
     return render_template('Prayers.html')
-# if __name__ == '__main__':
-#     app.run(debug=True)
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)  # Replace 5001 with any available port number
+    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True, port=5001)  # Replace 5001 with any available port number
 
 
 
