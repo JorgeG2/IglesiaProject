@@ -101,7 +101,7 @@ submissions = {}
 @app.route('/submit-form', methods=['POST'])
 def submit_form():
     name = request.form['name']
-    phone = request.form['phone']  # Assuming you want to store this as well
+    phone = request.form['phone'] 
     email = request.form['email']
 
     try:
@@ -114,7 +114,6 @@ def submit_form():
         INSERT INTO GeneralInfo (name, email, phone)
         VALUES (%s, %s, %s)
         """
-        # Assuming the message is stored in 'phone' for this example; adjust as necessary
         cursor.execute(insert_query, (name, email, phone))
 
         # Commit the transaction
@@ -195,10 +194,10 @@ def show_statements():
 @app.route('/hprayer')
 def show_prayerss():
     return render_template('Prayers.html')
-if __name__ == '__main__':
-    app.run(debug=True)
 # if __name__ == '__main__':
-#     app.run(debug=True, port=5001)  # Replace 5001 with any available port number
+#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True, port=5334)  # Replace 5001 with any available port number
 
 
 
