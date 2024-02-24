@@ -129,3 +129,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Ignore all files in a directory named 'downloads/'
+downloads/
