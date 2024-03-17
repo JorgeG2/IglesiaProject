@@ -5,8 +5,8 @@ from flask import Flask, render_template, request, jsonify, url_for, redirect
 import mysql.connector
 from config import API_KEY, DB_CONFIG
 from mysql.connector.errors import Error
-from dotenv import load_dotenv
-load_dotenv()
+# from dotenv import load_dotenv
+# load_dotenv()
 
 
 
